@@ -1,4 +1,6 @@
-require('dotenv').config();
+// original:require('dotenv').config();
+require('dotenv').config({ path: '.env.pact' });
+
 const { Verifier } = require('@pact-foundation/pact');
 const {
   baseOpts,

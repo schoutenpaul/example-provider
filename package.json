@@ -6,16 +6,20 @@
   "scripts": {
     "start": "node server.js",
     "test": "jest --testTimeout 30000 --testPathIgnorePatterns consumerChange.pact.test.js",
-    "test:pact": "jest --testTimeout 30000 --testMatch \"**/*.consumerChange.pact.test.js\""
+    "test:pact": "jest --testTimeout 30000 --testMatch \"**/*.consumerChange.pact.test.js\"",
+    "setup-env": "node scripts/setup-env.js",
+    "make-test": "npm run setup-env && npm run test"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.0.1",
+    "install": "^0.13.0",
+    "make": "^0.8.1",
     "request": "^2.88.2"
   },
   "devDependencies": {
     "@pact-foundation/pact": "15.0.1",
-    "dotenv": "16.4.7",
+    "dotenv": "^16.4.7",
     "eslint": "9.24.0",
     "jest": "29.7.0"
   },
